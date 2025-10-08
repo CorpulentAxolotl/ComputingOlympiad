@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 import java.util.Arrays;
-public class JavaCode {
+public class javacode {
     public static void main(String[] args) {
         try{ //input reader needs this or it tweaks out
             long mPaid = 0; //initiate most paid
