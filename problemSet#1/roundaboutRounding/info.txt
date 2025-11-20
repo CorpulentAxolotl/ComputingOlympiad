@@ -1,0 +1,19 @@
+USACO 2024 December Contest, Bronze
+Problem 1. Roundabout Rounding
+https://usaco.org/index.php?page=viewproblem2&cpid=1443
+type: math
+
+approach:
+simulation is not viable, so we're gonna use our intelligent brains to use math to solve this
+notice that roundabout rounding will never result in a number less than normal rounding.
+we first start off by noticing a number that won't be correct after roundabout rounding, has to have the form of:
+    4N........, where N is a number of 5 or greater
+    44...4N..., where N is a number of 5 or greater
+this is because if the number started with a digit less than 4, then it will be rounded correctly, since roundabout rounding will only result in a leading digit of at most 4, which gets rounded down appropriately
+but if the the number started with a digit greater than 4, then roundabout rounding can't make the leading digit round down, so it will be rounded appropriately
+
+a number with leading digit 4 is supposed to round down, but if the next digit is 5 or greater, then the 4 will round up to a 5, and then round up, not appropriately
+
+so our mission is to count all the number with form 4N..... or 4...4N... that are less or equal to x.
+
+and then you figure that out yourself from the code how I did it because it's too hard to explain with words and no visuals

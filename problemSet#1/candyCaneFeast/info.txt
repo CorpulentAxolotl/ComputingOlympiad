@@ -1,0 +1,21 @@
+USACO 2023 December Contest, Bronze
+Problem 1. Candy Cane Feast
+https://usaco.org/index.php?page=viewproblem2&cpid=1347
+type: simulation
+
+approach:
+loop through all canes (sizes)
+    for each cane, define an integer array of size 2 with 1st value 0, for the bottom of the candy cane and 2nd value being the cane's size, representing the top of the cane
+    then for each cane loop through each cow:
+        to ensure that the cane isn't completely eaten, check if the first and second value aren't equal, meaning the current cane has positive size
+            if it is completely eaten, then break to the next cane
+        if the current cow's height is greater than or equal to the height of the cane, that means that the cane will be completely eaten
+            so if this is true, add the length of the cane to the cow's height, that being 2nd value - 1st value of the cane array
+            and then break to the next cane, since the cane is completely eaten
+        
+        finally, if these are both not true, check if the height of the cow is greater than the bottom of the cane, otherwise the cow won't eat anything
+            if it is greater, add (cow height) - (1st value of array or bottom of cane) to cow height
+            then set the 1st value of the array, or bottom of the cane, to the original height of the cow before eating
+            this time the loop will continue as normal
+
+once you're done, just loop through all the cows and print them, one on each line
