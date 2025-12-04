@@ -1,0 +1,2 @@
+USACO 2023 December Contest, Bronze
+Problem 2. Cowntact Tracing 2
